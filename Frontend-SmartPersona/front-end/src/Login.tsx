@@ -14,8 +14,7 @@ const Login = ({ onSwitchToRegister }: LoginProps) => {
   const [success, setSuccess] = useState<string | null>(null);
   const { setAuthenticated } = useAuth();
 
-  const API_BASE = (import.meta as any).env?.VITE_BACKEND_URL || 'http://localhost:8000';
-
+  const API_BASE = (import.meta as any).env?.VITE_BACKEND_URL ;
   const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);

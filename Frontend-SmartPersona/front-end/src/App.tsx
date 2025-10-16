@@ -1,17 +1,16 @@
 import './App.css'
 import Login from './Login'
 import { useAuth } from './AuthContext'
-
+import Aichat from './AIchatbot'
+import Register from './Register';
 function App() {
   const { isAuthenticated } = useAuth();
   return (
     <>
       {isAuthenticated ? (
-        <div style={{ color: 'white', padding: 16 }}>
-          Logged in! คุณสามารถเรียก API อื่นๆ ต่อได้แล้ว
-        </div>
+      <Aichat/>
       ) : (
-        <Login/>
+        <Register/>
       )}
     </>
   )

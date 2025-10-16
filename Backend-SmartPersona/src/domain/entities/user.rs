@@ -7,8 +7,8 @@ use uuid::Uuid;
 use crate::infrastructure::postgres::schema::{users, sql_types::{UserRole, UserStatus as UserStatusType}};
 
 use diesel_derive_enum::DbEnum;
-#[derive(Debug, Clone, Copy, PartialEq, Eq, DbEnum)] // ← ต้องมี DbEnum
-#[ExistingTypePath = "UserRole"] // เชื่อมกับ ENUM ชื่อ UserRole ใน SQL
+#[derive(Debug, Clone, Copy, PartialEq, Eq, DbEnum)]
+#[ExistingTypePath = "UserRole"] 
 pub enum Role {
     PersonaUser,
     CompanyUser,
